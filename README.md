@@ -1,6 +1,23 @@
-# Zen, in-app firewall for Node.js | by Aikido
+# Zen Demo Node.js
 
 Zen by Aikido is an embedded Web Application Firewall that autonomously protects Node.js apps against common and critical attacks.
+
+<a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Ftimokoessler%2Fzen-demo-node">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://cdn.idx.dev/btn/try_dark_32.svg">
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://cdn.idx.dev/btn/try_light_32.svg">
+    <img
+      height="32"
+      alt="Try in IDX"
+      src="https://cdn.idx.dev/btn/try_purple_32.svg">
+  </picture>
+</a>
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/timokoessler/zen-demo-node)
 
 It protects your Node.js apps by scanning user input and where that data eventually flows to, allowing Zen to more accurately block SQL Injections, Path traversal attacks, and more. It runs on the same server as your Node.js app for simple installation and zero maintenance.
 

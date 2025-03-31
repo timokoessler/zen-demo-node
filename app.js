@@ -8,6 +8,16 @@ const { resolve } = require("path");
 const { initDatabase } = require("./src/db");
 const { initApi } = require("./src/api");
 
+function getPort() {
+  if (process.env.PORT) {
+    return process.env.PORT;
+  }
+  if (process.argv.length > 2) {
+    return process.argv[2];
+  }
+  return 3000;
+}
+
 async function main() {
   const app = express();
   app.use(express.json());
@@ -30,7 +40,7 @@ async function main() {
 
   initApi(app);
 
-  const port = process.env.PORT || 3000;
+  const port = getPort();
   const host = process.env.HOST || "localhost";
 
   app.listen(port, host, () => {

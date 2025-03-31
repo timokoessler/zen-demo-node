@@ -4,9 +4,14 @@
   # Which nixpkgs channel to use.
   channel = "stable-24.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
-  packages = [ pkgs.nodejs_20, pkgs.sqlite ];
+  packages = [
+    pkgs.nodejs_20
+    pkgs.sqlite
+  ];
   # Sets environment variables in the workspace
-  env = { };
+  env = { 
+    HOST="0.0.0.0";
+  };
   idx = let
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [ ];
@@ -28,7 +33,7 @@
       previews = {
         web = {
           command =
-            [ "HOST=0.0.0.0 PORT=$PORT npm start" ];
+            [ "npm" "start" "$PORT"];
           manager = "web";
         };
       };
