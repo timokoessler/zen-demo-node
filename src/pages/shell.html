@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zen for Node.js Live Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css" />
+  </head>
+  <body>
+    <a href="/"><img src="/img/aikido_logo.svg" class="logo" /></a>
+    <div class="container">
+      <h1>Shell Injection | Execute a command</h1>
+      <form id="commandForm">
+        <details open>
+          <summary>Examples</summary>
+          <code class="code example">invalid-command-here</code>
+          <p style="display: inline">
+            An invalid command to show that you have shell access
+          </p>
+          <br />
+          <code class="code example">ls -la</code>
+          <p style="display: inline">
+            Actual shell command which results in shell injection
+          </p>
+        </details>
+        <label for="userCommand">Command input :</label>
+        <input type="text" id="userCommand" name="userCommand" required />
+        <button class="btn" type="submit">Execute!</button>
+        <div id="error-container"></div>
+      </form>
+    </div>
+
+    <a href="/" class="text-center d-block">Go back</a>
+
+    <script src="/js/shell.js"></script>
+    <script src="/js/copy.js"></script>
+  </body>
+</html>

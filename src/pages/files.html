@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zen for Node.js Live Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css" />
+  </head>
+  <body>
+    <a href="/"><img src="/img/aikido_logo.svg" class="logo" /></a>
+    <form class="container" id="readFileForm">
+      <h1>Path Traversal | Read a file</h1>
+      <details open>
+        <summary>Examples</summary>
+        <code class="code example">home.txt</code>
+        <p style="display: inline">Inside blog directory, opens home file</p>
+        <br />
+        <code class="code example">2023/day2.txt</code>
+        <p style="display: inline">Inside blog directory, opens a blog entry</p>
+        <br />
+        <code class="code example">../secrets/key.txt</code>
+        <p style="display: inline">
+          Path traversal, opens a file outside blog directory
+        </p>
+      </details>
+      <div id="readForm">
+        <label for="path"><b>Path :</b></label>
+        <input type="text" id="path" required />
+        <button class="btn" type="submit">Read file</button>
+        <div id="error-container"></div>
+        <div id="result-container"></div>
+      </div>
+    </form>
+
+    <a href="/" class="text-center d-block">Go back</a>
+
+    <script src="/js/files.js"></script>
+    <script src="/js/copy.js"></script>
+  </body>
+</html>

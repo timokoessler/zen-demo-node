@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zen for Node.js Live Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css" />
+  </head>
+  <body>
+    <img src="/img/aikido_logo.svg" class="logo" />
+
+    <div class="container">
+      <h1>Zen by Aikido: Live Example</h1>
+      <p>
+        Zen, developed by Aikido, is designed to protect your web applications
+        from a wide range of vulnerabilities. This is a live example app. Zen is
+        installed and configured to protect this application. Here you can
+        experiment with different types of injection attacks, user blocking,
+        rate-limiting, bot blocking to see how Zen is able to protect against
+        unwanted behavior at runtime.<br />
+        <br />
+        → <a href="https://aikido.dev/zen" target="_blank">Install Zen</a> and
+        start securing your web applications today! <br />
+      </p>
+    </div>
+
+    <div class="container">
+      <h2>Test different vulnerabilities:</h2>
+      <div class="vuln-overview">
+        <a href="/sql" class="btn"><b>SQL Injection</b> | Create a new Pet</a>
+        <a href="/shell" class="btn"
+          ><b>Shell Injection</b> | Execute a command</a
+        >
+        <a href="/ssrf" class="btn"><b>SSRF</b> | Fetch a page</a>
+        <a href="/files" class="btn"><b>Path Traversal</b> | Read a file</a>
+      </div>
+    </div>
+  </body>
+</html>

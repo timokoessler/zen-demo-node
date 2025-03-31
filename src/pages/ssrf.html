@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zen for Node.js Live Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css" />
+  </head>
+  <body>
+    <a href="/"><img src="/img/aikido_logo.svg" class="logo" /></a>
+    <div class="container">
+      <h1>SSRF | Fetch a page</h1>
+      <form id="urlForm">
+        <details open>
+          <summary>Examples</summary>
+          <code class="code example">https://httpbin.org</code>
+          <p style="display: inline">
+            Request made to an outside service, not SSRF
+          </p>
+          <br />
+          <code class="code example">http://localhost:7000/</code>
+          <p style="display: inline">
+            Trying to access local resources, an SSRF attack
+          </p>
+        </details>
+        <label for="url">URL :</label>
+        <input type="text" id="url" name="url" required />
+        <button class="btn" type="submit">Make your request!</button>
+        <div id="error-container"></div>
+        <div id="result-container" class="text-green"></div>
+
+        <p class="hint">
+          Please note that if you run this demo in a browser, it can only access
+          website that allow CORS.
+        </p>
+      </form>
+    </div>
+
+    <a href="/" class="text-center d-block">Go back</a>
+
+    <script src="/js/ssrf.js"></script>
+    <script src="/js/copy.js"></script>
+  </body>
+</html>

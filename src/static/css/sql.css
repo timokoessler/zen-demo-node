@@ -1,0 +1,16 @@
+.pet-id {
+  background: #e3e0fc;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 900;
+}
+.pet-info {
+  font-weight: 500;
+}
+.pet-owned-by {
+  font-weight: 300;
+}
+.pet-owner {
+  font-weight: 500;
+}
