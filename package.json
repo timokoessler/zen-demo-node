@@ -13,5 +13,8 @@
   },
   "devDependencies": {
     "prettier": "^3.5.3"
+  },
+  "stackblitz": {
+    "startCommand": "chmod +x ./.stackblitz/start.sh && ./.stackblitz/start.sh"
   }
 }
