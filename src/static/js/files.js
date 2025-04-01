@@ -1,20 +1,20 @@
 document
-  .getElementById('readFileForm')
-  .addEventListener('submit', async (event) => {
+  .getElementById("readFileForm")
+  .addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent the default form submission
 
-    const errorContainer = document.getElementById('error-container');
-    errorContainer.innerText = '';
-    const resultContainer = document.getElementById('result-container');
-    resultContainer.innerText = '';
+    const errorContainer = document.getElementById("error-container");
+    errorContainer.innerText = "";
+    const resultContainer = document.getElementById("result-container");
+    resultContainer.innerText = "";
 
-    const path = document.getElementById('path').value;
+    const path = document.getElementById("path").value;
 
     try {
-      const request = await fetch('/api/readfile', {
-        method: 'POST',
+      const request = await fetch("/api/readfile", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ path }),
       });

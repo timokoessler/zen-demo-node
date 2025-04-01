@@ -1,21 +1,21 @@
-document.getElementById('urlForm').addEventListener('submit', async (event) => {
+document.getElementById("urlForm").addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent the default form submission
 
-  const errorContainer = document.getElementById('error-container');
-  const resultContainer = document.getElementById('result-container');
-  errorContainer.innerText = '';
-  resultContainer.innerText = '';
+  const errorContainer = document.getElementById("error-container");
+  const resultContainer = document.getElementById("result-container");
+  errorContainer.innerText = "";
+  resultContainer.innerText = "";
 
-  const url = document.getElementById('url').value;
+  const url = document.getElementById("url").value;
 
-  const submitBtn = document.querySelector('button[type=submit]');
+  const submitBtn = document.querySelector("button[type=submit]");
 
   try {
     submitBtn.disabled = true;
-    const request = await fetch('/api/request', {
-      method: 'POST',
+    const request = await fetch("/api/request", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ url }),
     });

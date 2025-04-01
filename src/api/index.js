@@ -1,7 +1,7 @@
-const { registerPetRoutes } = require('./pets');
-const { registerShellRoutes } = require('./execute');
-const { registerRequestRoutes } = require('./request');
-const { registerFileRoutes } = require('./files');
+const { registerPetRoutes } = require("./pets");
+const { registerShellRoutes } = require("./execute");
+const { registerRequestRoutes } = require("./request");
+const { registerFileRoutes } = require("./files");
 
 function initApi(app) {
   registerPetRoutes(app);

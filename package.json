@@ -1,5 +1,5 @@
 {
-  "name": "firewall-node-demo",
+  "name": "zen-demo-node",
   "private": true,
   "type": "commonjs",
   "scripts": {
@@ -8,7 +8,10 @@
   "dependencies": {
     "@aikidosec/firewall": "^1.6.14",
     "dotenv": "^16.4.7",
-    "express": "^4.18.2",
+    "express": "^5.1.0",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
   }
 }

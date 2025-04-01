@@ -1,18 +1,18 @@
 document
-  .getElementById('commandForm')
-  .addEventListener('submit', async (event) => {
+  .getElementById("commandForm")
+  .addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent the default form submission
 
-    const errorContainer = document.getElementById('error-container');
-    errorContainer.innerText = '';
+    const errorContainer = document.getElementById("error-container");
+    errorContainer.innerText = "";
 
-    const userCommand = document.getElementById('userCommand').value;
+    const userCommand = document.getElementById("userCommand").value;
 
     try {
-      const request = await fetch('/api/execute', {
-        method: 'POST',
+      const request = await fetch("/api/execute", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ userCommand }),
       });

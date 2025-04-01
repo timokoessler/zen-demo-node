@@ -1,7 +1,7 @@
-const { exec } = require('child_process');
+const { exec } = require("child_process");
 
 function registerShellRoutes(app) {
-  app.post('/api/execute', (req, res) => {
+  app.post("/api/execute", (req, res) => {
     const { userCommand } = req.body;
 
     try {
@@ -9,7 +9,7 @@ function registerShellRoutes(app) {
       exec(userCommand, (error, stdout, stderr) => {
         if (error) {
           // Return stderr on error
-          res.status(500).send(stderr || 'Command failed');
+          res.status(500).send(stderr || "Command failed");
           return;
         }
         // Return command output
